@@ -1,7 +1,7 @@
 django_test
 ===========
 
-##This project is an experimentation using django, elasticsearch and backbone.
+##This project is an experimentation using django, elasticsearch and angularJS.
 
 
 
@@ -37,3 +37,11 @@ response = requests.post('http://127.0.0.1:9200/my_index/blog/_search', data=jso
 print response.json()
 
 ```
+
+## AngularJS
+
+https://docs.angularjs.org/tutorial/step_07
+http://coder1.com/articles/consuming-rest-services-angularjs
+https://docs.angularjs.org/api/ngResource/service/$resource
+
+
