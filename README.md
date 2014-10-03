@@ -1,10 +1,7 @@
 django_test
 ===========
 
-#This project is an experimentation using django, elasticsearch and backbone.
-
-# Dont want to forget this
-pip install fabric
+##This project is an experimentation using django, elasticsearch and backbone.
 
 
 
