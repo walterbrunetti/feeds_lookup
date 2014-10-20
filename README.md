@@ -45,3 +45,20 @@ http://coder1.com/articles/consuming-rest-services-angularjs
 https://docs.angularjs.org/api/ngResource/service/$resource
 
 
+
+
+## Steps to install
+
+- git clone
+
+- sudo apt-get install nodejs npm 
+
+- sudo npm install bower -g
+
+- bower install
+
+- npm install
+
+- 
+
+

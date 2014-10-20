@@ -39,10 +39,13 @@ DEFAULT_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-    'south',
+    'rest_framework',
 )
 
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    'django_test.apps.feeds',
+
+)
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -88,3 +91,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGINATE_BY': 10
+}
+
