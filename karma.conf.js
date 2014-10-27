@@ -4,11 +4,12 @@ module.exports = function(config){
     basePath : './',
 
     files : [
-      'app/bower_components/angular/angular.js',
-      'app/bower_components/angular-route/angular-route.js',
-      'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/components/**/*.js',
-      'app/view*/**/*.js'
+      //ANGULAR_SCENARIO,
+      //ANGULAR_SCENARIO_ADAPTER,
+      'django_test/static/bower_components/angular/angular.js',
+      'django_test/static/bower_components/angular-route/angular-route.js',
+      'django_test/static/bower_components/angular-mocks/angular-mocks.js',
+      'django_test/static/feeds/*.js'
     ],
 
     autoWatch : true,
@@ -27,7 +28,9 @@ module.exports = function(config){
     junitReporter : {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
-    }
+    },
+
+    singleRun :true
 
   });
 };

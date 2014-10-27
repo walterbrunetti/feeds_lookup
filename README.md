@@ -53,9 +53,9 @@ https://docs.angularjs.org/api/ngResource/service/$resource
 
 - sudo apt-get install nodejs npm 
 
-- sudo npm install bower -g
+- #sudo npm install bower -g
 
-- bower install
+- #bower install
 
 - npm install
 

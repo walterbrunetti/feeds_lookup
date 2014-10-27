@@ -1,9 +1,9 @@
 {
-	"name": "angular-seed",
+	"name": "feeds-project",
 	"private": true,
 	"version": "0.0.0",
-	"description": "A starter project for AngularJS",
-	"repository": "https://github.com/angular/angular-seed",
+	"description": "A project in AngularJS with Django and Elasticsearch",
+	"repository": "https://github.com/walterbrunetti/django_test/",
 	"license": "MIT",
 	"devDependencies": {
 		"karma": "~0.10",
