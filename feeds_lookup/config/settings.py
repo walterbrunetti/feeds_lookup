@@ -107,6 +107,6 @@ REST_FRAMEWORK = {
 }
 
 TEMPLATE_DIRS = (
-    u'/home/wbrunetti/Documents/feeds_lookup/feeds_lookup/static/templates',
+    u'/home/wbrunetti/Documents/feeds_lookup/feeds_lookup/templates',
 )
 
