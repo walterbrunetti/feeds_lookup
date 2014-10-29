@@ -4,8 +4,7 @@
 <div class="container">
 
     {% verbatim %}
-
-        <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
+        <div id="app1" ng-app="invoice1" ng-controller="InvoiceController as invoice">
           <b>Invoice:</b>
           <div>
             Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
@@ -23,6 +22,12 @@
             </span>
             <button class="btn" ng-click="invoice.pay()">Pay</button>
           </div>
+        </div>
+    {% endverbatim %}
+
+    {% verbatim %}
+        <div id="app2" ng-app="article" ng-controller="ArticleController as controller">
+            <ul> <li ng-repeat="item in controller.items"> {{ item.name }} </li> </ul>
         </div>
     {% endverbatim %}
 

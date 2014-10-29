@@ -1,4 +1,5 @@
 
+'use strict';
 
 angular.module('invoice1', [])
   .controller('InvoiceController', function() {
