@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from django.template.loader import select_template
 from rest_framework import viewsets
-from django_test.apps.feeds.serializers import FeedSerializer, ArticleSerializer
+from feeds_lookup.apps.feeds.serializers import FeedSerializer, ArticleSerializer
 from models import Feed, Article
 
 

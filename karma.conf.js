@@ -6,10 +6,10 @@ module.exports = function(config){
     files : [
       //ANGULAR_SCENARIO,
       //ANGULAR_SCENARIO_ADAPTER,
-      'django_test/static/bower_components/angular/angular.js',
-      'django_test/static/bower_components/angular-route/angular-route.js',
-      'django_test/static/bower_components/angular-mocks/angular-mocks.js',
-      'django_test/static/feeds/*.js'
+      'feeds_lookup/static/bower_components/angular/angular.js',
+      'feeds_lookup/static/bower_components/angular-route/angular-route.js',
+      'feeds_lookup/static/bower_components/angular-mocks/angular-mocks.js',
+      'feeds_lookup/static/feeds/*.js'
     ],
 
     autoWatch : true,

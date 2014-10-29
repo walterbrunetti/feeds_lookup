@@ -9,5 +9,5 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    (r'', include('django_test.apps.feeds.urls')),
+    (r'', include('feeds_lookup.apps.feeds.urls')),
 )

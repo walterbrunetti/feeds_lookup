@@ -1,4 +1,4 @@
-django_test
+feeds_lookup
 ===========
 
 ##This project is an experimentation using django, elasticsearch and angularJS.

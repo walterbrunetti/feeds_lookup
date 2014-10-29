@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework import routers
-from django_test.apps.feeds import views
+from feeds_lookup.apps.feeds import views
 
 
 router = routers.DefaultRouter()

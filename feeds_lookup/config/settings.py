@@ -43,7 +43,7 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
-    'django_test.apps.feeds',
+    'feeds_lookup.apps.feeds',
 
 )
 
@@ -58,9 +58,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'django_test.urls'
+ROOT_URLCONF = 'feeds_lookup.urls'
 
-WSGI_APPLICATION = 'django_test.wsgi.application'
+WSGI_APPLICATION = 'feeds_lookup.wsgi.application'
 
 
 # Database
@@ -97,7 +97,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    u'/home/wbrunetti/Documents/django_test/django_test/static',
+    u'/home/wbrunetti/Documents/feeds_lookup/feeds_lookup/static',
 
 )
 
@@ -107,6 +107,6 @@ REST_FRAMEWORK = {
 }
 
 TEMPLATE_DIRS = (
-    u'/home/wbrunetti/Documents/django_test/django_test/static/templates',
+    u'/home/wbrunetti/Documents/feeds_lookup/feeds_lookup/static/templates',
 )
 

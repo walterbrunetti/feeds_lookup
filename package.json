@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.0.0",
 	"description": "A project in AngularJS with Django and Elasticsearch",
-	"repository": "https://github.com/walterbrunetti/django_test/",
+	"repository": "https://github.com/walterbrunetti/feeds_lookup/",
 	"license": "MIT",
 	"devDependencies": {
 		"karma": "~0.10",

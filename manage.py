@@ -3,7 +3,7 @@ import os
 import sys
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_test.config.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "feeds_lookup.config.settings")
 
     from django.core.management import execute_from_command_line
 
