@@ -1,5 +1,5 @@
 {
-	"name": "django_test",
+	"name": "feeds_lookup",
 	"description": "A starter project for AngularJS",
 	"version": "0.0.0",
 	"homepage": "www.walterbrunetti.com.ar",
@@ -9,6 +9,7 @@
 		"angular": "1.2.x",
 		"angular-route": "1.2.x",
 		"angular-loader": "1.2.x",
-		"angular-mocks": "~1.2.x"
+		"angular-mocks": "~1.2.x",
+		"angular-resource": "~1.2.x"
 	}
 }

@@ -1,8 +1,14 @@
 
 'use strict';
 
-var article_app = angular.module('article', []);
-article_app.controller('ArticleController', function() {
+var article_app = angular.module('article', ['ngResource']);
+
+article_app.factory("Post", function($resource) {
+  return $resource("api/articles");
+});
+
+
+article_app.controller('ArticleController', function($scope) {
     this.qty = 1;
 
     this.items = [
@@ -13,6 +19,14 @@ article_app.controller('ArticleController', function() {
     ];
 
 
+});
+
+
+article_app.controller("PostIndexCtrl", function($scope, Post) {
+  Post.get(function(data) {
+    $scope.posts = data.results;
   });
+});
 
 angular.bootstrap(document.getElementById("app2"),['article']);
+angular.bootstrap(document.getElementById("app3"),['article']);
