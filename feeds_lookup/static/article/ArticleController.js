@@ -1,32 +1,26 @@
-
 'use strict';
 
-var article_app = angular.module('article', ['ngResource']);
+var articleControllers = angular.module('articleControllers', []);
 
-article_app.factory("Post", function($resource) {
-  return $resource("api/articles");
-});
+articleControllers.controller("ArticleController", ['$scope', 'Article', function($scope, Article) {
 
+    $scope.articles = Article.query(function(data) {
+        $scope.articles = data.results;
+    });
+    $scope.article = Article.query({id: 1});
 
-article_app.controller('ArticleController', function($scope) {
-    this.qty = 1;
-
-    this.items = [
+    $scope.items = [
         { 'name': 'Scuba Diving Kit', 'id': 7297510 },
         { 'name': 'Snorkel', 'id': '0278916' },
         { 'name': 'Wet Suit', 'id': '2389017' },
         { 'name': 'Beach Towel', 'id': 1000983 }
     ];
+}]);
 
 
-});
+articleControllers.controller("ArticleDetailController", ['$scope', '$routeParams', 'Article', function($scope, $routeParams, Article) {
+    alert($routeParams.id);
+    $scope.article = Article.query({id: $routeParams.id});
 
+}]);
 
-article_app.controller("PostIndexCtrl", function($scope, Post) {
-  Post.get(function(data) {
-    $scope.posts = data.results;
-  });
-});
-
-angular.bootstrap(document.getElementById("app2"),['article']);
-angular.bootstrap(document.getElementById("app3"),['article']);

@@ -1,6 +1,5 @@
-
 'use strict';
-
+/*
 angular.module('invoice1', [])
   .controller('InvoiceController', function() {
     this.qty = 1;
@@ -22,4 +21,27 @@ angular.module('invoice1', [])
     this.pay = function pay() {
       window.alert("Thanks!");
     };
-  });
+});
+
+*/
+
+var article_app = angular.module('article', ['ngRoute', 'articleControllers', 'articleServices']);
+
+article_app.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/home', {
+        //templateUrl: 'partials/phone-list.html',
+        controller: 'ArticleController'
+      }).
+      when('/home/:id', {
+        //templateUrl: 'partials/phone-detail.html',
+        controller: 'ArticleDetailController'
+      }).
+      otherwise({
+        redirectTo: '/home'
+      });
+}]);
+
+
+//angular.bootstrap(document.getElementById("article-app"),['article']);

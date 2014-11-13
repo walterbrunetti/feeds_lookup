@@ -1,10 +1,10 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="container">
+<div class="container" ng-app="article">
 
     {% verbatim %}
-        <div id="app1" ng-app="invoice1" ng-controller="InvoiceController as invoice">
+        <!-- <div id="app1" ng-app="invoice1" ng-controller="InvoiceController as invoice">
           <b>Invoice:</b>
           <div>
             Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
@@ -22,20 +22,30 @@
             </span>
             <button class="btn" ng-click="invoice.pay()">Pay</button>
           </div>
-        </div>
+        </div> -->
     {% endverbatim %}
 
     {% verbatim %}
-        <div id="app2" ng-app="article" ng-controller="ArticleController as controller">
-            <ul> <li ng-repeat="item in controller.items"> {{ item.name }} </li> </ul>
+        <div id="article-app" ng-controller="ArticleController">
+            {{ articles }}
+            <ul> <li ng-repeat="item in items"> {{ item.name }} </li> </ul>
+            {{ article }}
         </div>
-    {% endverbatim %}
 
-    {% verbatim %}
-        <div id="app3" ng-app="article" ng-controller="PostIndexCtrl">
-            {{ posts }}
+        <div id="article-detail" ng-controller="ArticleDetailController">
+            {{ article }}
         </div>
     {% endverbatim %}
 
 </div>
+
+
+
+<script src="/static/bower_components/angular/angular.js"></script>
+<script src="/static/bower_components/angular-route/angular-route.js"></script>
+<script src="/static/bower_components/angular-resource/angular-resource.js"></script>
+<script src="/static/app.js"></script>
+<script src="/static/article/ArticleService.js"></script>
+<script src="/static/article/ArticleController.js"></script>
+
 {% endblock %}
