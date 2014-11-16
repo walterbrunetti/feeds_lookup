@@ -1,6 +1,6 @@
 'use strict';
 
-var articleControllers = angular.module('articleControllers', []);
+var articleControllers = angular.module('article.controllers', []);
 
 articleControllers.controller("ArticleController", ['$scope', '$routeParams', 'ArticleSearch', function($scope, $routeParams, ArticleSearch) {
 

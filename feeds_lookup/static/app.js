@@ -1,6 +1,6 @@
 'use strict';
 
-var article_app = angular.module('article', ['ngRoute', 'articleControllers', 'articleServices']);
+var article_app = angular.module('article', ['ngRoute', 'article.controllers', 'article.services']);
 
 article_app.config(['$routeProvider',
     function($routeProvider) {

@@ -1,5 +1,5 @@
 
-var articleServices = angular.module('articleServices', ['ngResource']);
+var articleServices = angular.module('article.services', ['ngResource']);
 
 articleServices.factory('Article', ['$resource',
     function($resource){
