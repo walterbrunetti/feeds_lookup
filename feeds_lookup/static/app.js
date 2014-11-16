@@ -1,46 +1,21 @@
 'use strict';
-/*
-angular.module('invoice1', [])
-  .controller('InvoiceController', function() {
-    this.qty = 1;
-    this.cost = 2;
-    this.inCurr = 'EUR';
-    this.currencies = ['USD', 'EUR', 'CNY'];
-    this.usdToForeignRates = {
-      USD: 1,
-      EUR: 0.74,
-      CNY: 6.09
-    };
-
-    this.total = function total(outCurr) {
-      return this.convertCurrency(this.qty * this.cost, this.inCurr, outCurr);
-    };
-    this.convertCurrency = function convertCurrency(amount, inCurr, outCurr) {
-      return amount * this.usdToForeignRates[outCurr] / this.usdToForeignRates[inCurr];
-    };
-    this.pay = function pay() {
-      window.alert("Thanks!");
-    };
-});
-
-*/
 
 var article_app = angular.module('article', ['ngRoute', 'articleControllers', 'articleServices']);
 
 article_app.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/', {
-        templateUrl: '/static/article/assets/_articles.html',
-        controller: 'ArticleController'
-      }).
-      when('/:id', {
-        templateUrl: '/static/article/assets/_article_details.html',
-        controller: 'ArticleDetailController'
-      }).
-      otherwise({
-        redirectTo: '/'
-      });
+    function($routeProvider) {
+        $routeProvider.
+            when('/', {
+                templateUrl: '/static/article/assets/_articles.html',
+                controller: 'ArticleController'
+            }).
+            when('/:id', {
+                templateUrl: '/static/article/assets/_article_details.html',
+                controller: 'ArticleDetailController'
+            }).
+            otherwise({
+                redirectTo: '/'
+            });
 }]);
 
 

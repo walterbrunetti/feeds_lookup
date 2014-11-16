@@ -1,9 +1,16 @@
 
 
+<div>
+    
+    <div>
+            <label for="search-query">Search:</label> <input type="text" ng-model="search_query" name="search-query" required />
+            <button class="btn-search" ng-click="search()">Search</button>
+    </div>
 
+    <div id="article-app">
+        <ul>
+            <li ng-repeat="article in articles">{{ article.title }}</li>
+        </ul>
+    </div>
 
-<div id="article-app">
-    {{ articles }}
-    <ul> <li ng-repeat="item in items"> {{ item.name }} </li> </ul>
 </div>
-

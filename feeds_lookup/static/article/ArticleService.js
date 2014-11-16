@@ -7,3 +7,9 @@ articleServices.factory('Article', ['$resource',
     });
 }]);
 
+
+articleServices.factory('ArticleSearch', ['$resource',
+    function($resource){
+        return $resource('/api/articles/:query', {}, {query: {method:'GET'}
+    });
+}]);

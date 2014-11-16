@@ -2,18 +2,17 @@
 
 var articleControllers = angular.module('articleControllers', []);
 
-articleControllers.controller("ArticleController", ['$scope', '$routeParams', 'Article', function($scope, $routeParams, Article) {
+articleControllers.controller("ArticleController", ['$scope', '$routeParams', 'ArticleSearch', function($scope, $routeParams, ArticleSearch) {
 
-    $scope.articles = Article.query(function(data) {
-        $scope.articles = data.results;
-    });
+    
+    $scope.search = function search() {
+        $scope.articles = ArticleSearch.query({query: $scope.search_query}, function(data) {
+            $scope.articles = data.results;
+        });
+    };
 
-    $scope.items = [
-        { 'name': 'Scuba Diving Kit', 'id': 7297510 },
-        { 'name': 'Snorkel', 'id': '0278916' },
-        { 'name': 'Wet Suit', 'id': '2389017' },
-        { 'name': 'Beach Towel', 'id': 1000983 }
-    ];
+    $scope.search_query = "";
+
 }]);
 
 
