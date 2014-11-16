@@ -2,12 +2,11 @@
 
 var articleControllers = angular.module('articleControllers', []);
 
-articleControllers.controller("ArticleController", ['$scope', 'Article', function($scope, Article) {
+articleControllers.controller("ArticleController", ['$scope', '$routeParams', 'Article', function($scope, $routeParams, Article) {
 
     $scope.articles = Article.query(function(data) {
         $scope.articles = data.results;
     });
-    $scope.article = Article.query({id: 1});
 
     $scope.items = [
         { 'name': 'Scuba Diving Kit', 'id': 7297510 },

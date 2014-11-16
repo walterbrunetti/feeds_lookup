@@ -30,16 +30,16 @@ var article_app = angular.module('article', ['ngRoute', 'articleControllers', 'a
 article_app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/home', {
-        //templateUrl: 'partials/phone-list.html',
+      when('/', {
+        templateUrl: '/static/article/assets/_articles.html',
         controller: 'ArticleController'
       }).
-      when('/home/:id', {
-        //templateUrl: 'partials/phone-detail.html',
+      when('/:id', {
+        templateUrl: '/static/article/assets/_article_details.html',
         controller: 'ArticleDetailController'
       }).
       otherwise({
-        redirectTo: '/home'
+        redirectTo: '/'
       });
 }]);
 

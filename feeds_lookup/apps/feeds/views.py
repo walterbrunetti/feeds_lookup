@@ -9,7 +9,7 @@ from models import Feed, Article
 
 
 
-def index(request, article_id):
+def index(request):
     context = {
         'app' : 'empty_for_now'
     }

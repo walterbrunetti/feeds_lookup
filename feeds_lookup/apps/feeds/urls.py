@@ -11,6 +11,6 @@ router.register(r'articles', views.ArticleViewSet)
 # Additionally, we include login URLs for the browseable API.
 urlpatterns = [
     url(r'^api/', include(router.urls)),
-    url(r'^home/(?P<article_id>\w+)$', views.index, name='index'),
+    url(r'^$', views.index, name='index'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

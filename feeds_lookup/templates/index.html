@@ -25,17 +25,7 @@
         </div> -->
     {% endverbatim %}
 
-    {% verbatim %}
-        <div id="article-app" ng-controller="ArticleController">
-            {{ articles }}
-            <ul> <li ng-repeat="item in items"> {{ item.name }} </li> </ul>
-            {{ article }}
-        </div>
-
-        <div id="article-detail" ng-controller="ArticleDetailController">
-            {{ article }}
-        </div>
-    {% endverbatim %}
+    <div ng-view></div>
 
 </div>
 
@@ -46,6 +36,6 @@
 <script src="/static/bower_components/angular-resource/angular-resource.js"></script>
 <script src="/static/app.js"></script>
 <script src="/static/article/ArticleService.js"></script>
-<script src="/static/article/ArticleController.js"></script>
+<script src="/static/article/ArticleControllers.js"></script>
 
 {% endblock %}
