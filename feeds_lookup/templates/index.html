@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 
+{% block header %}
+    <h1>Search for articles</h1>
+{% endblock %}
+
 {% block content %}
 <div class="container" ng-app="article">
 
@@ -12,7 +16,6 @@
 </div>
 
 
-
 <script src="/static/bower_components/angular/angular.js"></script>
 <script src="/static/bower_components/angular-route/angular-route.js"></script>
 <script src="/static/bower_components/angular-resource/angular-resource.js"></script>
@@ -21,3 +24,4 @@
 <script src="/static/article/ArticleControllers.js"></script>
 
 {% endblock %}
+

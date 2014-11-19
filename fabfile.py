@@ -5,7 +5,7 @@ from elasticsearch import Elasticsearch
 
 def prepare_deployment(branch_name):
     local('python manage.py test django_project')
-    local('git add -p && git commit')
+    #local('git add -p && git commit')
 
 
 def import_feeds():

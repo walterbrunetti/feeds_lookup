@@ -11,6 +11,8 @@ router.register(r'articles', views.ArticleViewSet)
 # Additionally, we include login URLs for the browseable API.
 urlpatterns = [
     url(r'^api/', include(router.urls)),
+    url('^api/articles/api-search/(?P<title>.+)$', views.ArticleApiSearch.as_view()),  # had to remove the trailing_slash
+    url(r'^api/articles/search/$', views.ArticleSearch.as_view()),
     url(r'^$', views.index, name='index'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

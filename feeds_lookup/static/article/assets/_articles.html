@@ -9,7 +9,9 @@
 
     <div id="article-app">
         <ul>
-            <li ng-repeat="article in articles">{{ article.title }}</li>
+            <li ng-repeat="article in articles">
+                <a href="{{ article.url }}" target="_blank">{{ article.title }}</a>
+            </li>
         </ul>
     </div>
 

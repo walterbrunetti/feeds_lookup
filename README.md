@@ -3,7 +3,25 @@ feeds_lookup
 
 ##This project is an experimentation using django, elasticsearch and angularJS.
 
+By Walter Brunetti
 
+
+### Steps to install
+
+- git clone
+
+- sudo apt-get install nodejs npm 
+
+- #sudo npm install bower -g
+
+- #bower install
+
+- npm install
+
+
+
+
+# Elasticsearch info
 
 http://pixabay.com/en/blog/posts/django-search-with-elasticsearch-47/
 
@@ -37,28 +55,3 @@ response = requests.post('http://127.0.0.1:9200/my_index/blog/_search', data=jso
 print response.json()
 
 ```
-
-## AngularJS
-
-https://docs.angularjs.org/tutorial/step_07
-http://coder1.com/articles/consuming-rest-services-angularjs
-https://docs.angularjs.org/api/ngResource/service/$resource
-
-
-
-
-## Steps to install
-
-- git clone
-
-- sudo apt-get install nodejs npm 
-
-- #sudo npm install bower -g
-
-- #bower install
-
-- npm install
-
-- 
-
-
